@@ -1,548 +1,487 @@
-📌 About the Project
+## 🌟 Overview
 
-**Budget Planning Application** is a personal finance management web application developed as a **Software Engineering project**.
+**Budget Planning Application** is a modern client-side web application designed to help users manage their personal finances in a simple and organized way.
 
-The main purpose of this application is to help users manage their personal finances in an organized way. Users can record their income and expenses, define a monthly budget, set savings goals, and monitor their financial progress through an easy-to-use dashboard.
+With this application, users can:
 
-The application provides a simple alternative to maintaining financial records manually in notebooks or spreadsheets.
+💵 Track income  
+💸 Manage expenses  
+📊 Monitor monthly budgets  
+🎯 Set savings goals  
+🔎 Search and filter transactions  
+📈 Analyse spending by category  
+💾 Store data using LocalStorage  
+📥 Export transactions as CSV  
+📱 Use the application on desktop, tablet and mobile devices  
 
----
-
-## 🎯 Problem Statement
-
-Managing personal finances manually can make it difficult to understand where money is being spent and whether the monthly budget is being followed.
-
-Users often face problems such as:
-
-- Lack of proper expense tracking
-- Difficulty maintaining a monthly budget
-- No clear view of available balance
-- Poor understanding of spending categories
-- Difficulty tracking savings progress
-- Manual calculation of income and expenses
-
-The **Budget Planning Application** addresses these problems by providing a centralized platform for managing and monitoring personal finances.
+The project is developed as a **Software Engineering academic project** and demonstrates the complete software development lifecycle from requirements analysis to implementation and testing.
 
 ---
 
-## 🎯 Objectives
+## ✨ Key Features
 
-The major objectives of this project are:
-
-- To provide an easy-to-use budget management system.
-- To record and organize income and expenses.
-- To calculate total income, expenses and remaining balance automatically.
-- To help users set and monitor monthly budgets.
-- To provide savings goal tracking.
-- To analyze expenses according to categories.
-- To reduce manual financial calculations.
-- To provide a responsive and user-friendly interface.
-- To maintain financial data using browser LocalStorage.
+| Feature | Description |
+|---|---|
+| 💰 Income Management | Add, edit and delete income records |
+| 💸 Expense Management | Track and manage daily expenses |
+| 📊 Dashboard | View important financial information at a glance |
+| 🎯 Budget Planning | Set and monitor monthly spending limits |
+| 🏆 Savings Goals | Set savings targets and track progress |
+| 🗂️ Category Analysis | Analyse expenses category-wise |
+| 🔎 Search | Quickly search transactions |
+| 🔽 Filter | Filter income and expense records |
+| 💾 LocalStorage | Automatically preserve data in browser |
+| 📥 CSV Export | Export transactions to a CSV file |
+| 🔄 Reset Demo | Restore sample/demo data |
+| 📱 Responsive UI | Works across different screen sizes |
 
 ---
 
-## ✨ Features
-
-### 💵 Income Management
-
-- Add income transactions
-- Edit income records
-- Delete income records
-- Categorize income
-- Automatically calculate total income
-
-### 💸 Expense Management
-
-- Add expenses
-- Edit expenses
-- Delete expenses
-- Categorize expenses
-- Automatically calculate total expenses
+# 🖥️ Application Preview
 
 ### 📊 Dashboard
 
-The dashboard provides an overview of:
-
-- Total Income
-- Total Expenses
-- Current Balance
-- Savings Rate
-- Monthly Budget
-- Budget Usage
-- Savings Goal
-- Savings Progress
-
-### 🎯 Budget Planning
-
-Users can define a monthly spending budget.
-
-The application automatically calculates:
+> Add your screenshot here:
 
 ```text
-Budget Used = Total Expenses / Monthly Budget × 100
+screenshots/dashboard.png
 ```
 
-If expenses exceed the planned budget, the application provides a budget warning.
+![Dashboard](screenshots/dashboard.png)
 
-### 🏦 Savings Goal
+### 💳 Transaction Management
 
-Users can define a savings target and monitor their progress.
-
-Example:
-
-```text
-Savings Goal = ₹20,000
-Current Balance = ₹12,000
-
-Progress = 60%
-```
-
-### 📂 Category Analysis
-
-Expenses can be categorized into:
-
-- Food
-- Transport
-- Education
-- Shopping
-- Bills
-- Entertainment
-- Health
-- Other
-
-The application displays category-wise spending to help users understand their spending habits.
-
-### 🔎 Search & Filter
-
-Users can:
-
-- Search transactions
-- Filter by Income/Expense
-- Filter by Category
-
-### 💾 Data Persistence
-
-Application data is stored using **Browser LocalStorage**, so data remains available even after refreshing the page.
-
-### 📥 CSV Export
-
-Users can export their transaction records into a CSV file for backup or further analysis.
+![Transactions](screenshots/transactions.png)
 
 ### 📱 Responsive Design
 
-The application is designed to work on:
+![Mobile View](screenshots/mobile-view.png)
 
-- Desktop
-- Laptop
-- Tablet
-- Mobile devices
+> 💡 **Tip:** Put your actual screenshots inside the `screenshots/` folder using the filenames above.
 
 ---
 
-# 🛠️ Technology Stack
+# 🛠️ Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| HTML5 | Application structure |
-| CSS3 | Styling and responsive design |
-| JavaScript ES6 | Application logic |
-| LocalStorage | Client-side data persistence |
-| CSV | Transaction data export |
+### 🎨 Frontend
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+### 💾 Storage
+
+![LocalStorage](https://img.shields.io/badge/Browser-LocalStorage-orange?style=flat-square)
+
+### 🔧 Development Tools
+
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
 ---
 
 # 🏗️ System Architecture
 
-The application follows a simple client-side architecture.
+The application follows a simple **client-side layered architecture**:
 
 ```text
-                ┌─────────────────────┐
-                │        User         │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │     Web Interface   │
-                │     HTML + CSS       │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │   Application Logic │
-                │     JavaScript      │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │    LocalStorage     │
-                │   Browser Storage   │
-                └─────────────────────┘
+                    👤 USER
+                      │
+                      ▼
+        ┌─────────────────────────┐
+        │     🎨 Presentation     │
+        │      HTML + CSS         │
+        └────────────┬────────────┘
+                     │
+                     ▼
+        ┌─────────────────────────┐
+        │    ⚙️ Application Logic │
+        │       JavaScript        │
+        └────────────┬────────────┘
+                     │
+                     ▼
+        ┌─────────────────────────┐
+        │      💾 Data Layer      │
+        │       LocalStorage      │
+        └─────────────────────────┘
 ```
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
 ```text
 Budget-Planning-Application/
 │
-├── README.md
-├── SRS.md
-├── LICENSE
-├── .gitignore
+├── 📄 README.md
+├── 📄 SRS.md
+├── 📄 LICENSE
+├── 📄 .gitignore
 │
-├── docs/
-│   ├── Software-Requirements.md
-│   ├── System-Design.md
-│   ├── Use-Case.md
-│   ├── Test-Plan.md
-│   └── User-Manual.md
+├── 📁 docs/
+│   ├── 📄 01-System-Design.md
+│   ├── 📄 02-Use-Case-Diagram.md
+│   ├── 📄 03-DFD.md
+│   ├── 📄 04-ER-Diagram.md
+│   ├── 📄 05-Flowchart.md
+│   ├── 📄 06-Database-Design.md
+│   ├── 📄 07-Test-Plan.md
+│   └── 📄 08-User-Manual.md
 │
-├── src/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
+├── 📁 src/
+│   ├── 🌐 index.html
+│   ├── 🎨 style.css
+│   └── ⚙️ script.js
 │
-├── tests/
-│   └── test-cases.md
+├── 📁 tests/
+│   └── 🧪 test-cases.md
 │
-└── screenshots/
+└── 📁 screenshots/
+    ├── 🖼️ dashboard.png
+    ├── 🖼️ transactions.png
+    ├── 🖼️ budget.png
+    └── 🖼️ mobile-view.png
 ```
 
 ---
 
-# ⚙️ Installation & Setup
+# 🚀 Getting Started
 
-## Step 1 — Clone the Repository
+## 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/mahiansh11/Budget-Planning-Application.git
+git clone https://github.com/your-username/Budget-Planning-Application.git
 ```
 
-## Step 2 — Open the Project
+## 2️⃣ Navigate to the Project
 
 ```bash
 cd Budget-Planning-Application
 ```
 
-## Step 3 — Run the Application
+## 3️⃣ Run the Application
 
-Open:
+No backend or package installation is required.
+
+Simply open:
 
 ```text
 src/index.html
 ```
 
-in any modern web browser.
+in your browser.
 
-### Recommended
+### 💡 Recommended
 
 If you are using **VS Code**, install the **Live Server** extension and open the project using Live Server.
 
 ---
 
-# 🚀 How to Use
+# 💡 How It Works
 
-### 1. Add Income
-
-Select:
+The application follows a simple financial workflow:
 
 ```text
-Income → Description → Category → Amount → Date
+👤 User
+   │
+   ├── 💰 Add Income
+   │
+   ├── 💸 Add Expense
+   │
+   ├── 📊 Set Budget
+   │
+   ├── 🎯 Set Savings Goal
+   │
+   ├── 🔎 Search / Filter
+   │
+   └── 📈 Analyse Finances
+             │
+             ▼
+      💾 LocalStorage
 ```
-
-Then click:
-
-```text
-Add Transaction
-```
-
-### 2. Add Expense
-
-Select:
-
-```text
-Expense → Description → Category → Amount → Date
-```
-
-Then click:
-
-```text
-Add Transaction
-```
-
-### 3. Set Monthly Budget
-
-Enter your desired monthly budget and click:
-
-```text
-Save Budget
-```
-
-### 4. Set Savings Goal
-
-Enter the desired savings amount and click:
-
-```text
-Save Goal
-```
-
-### 5. Manage Transactions
-
-Every transaction can be:
-
-- Edited
-- Deleted
-- Searched
-- Filtered
-
-### 6. Export Data
-
-Click:
-
-```text
-Export CSV
-```
-
-to download transaction records.
 
 ---
 
 # 🧮 Financial Calculations
 
-### Total Income
+### 💰 Total Income
 
 ```text
-Total Income = Sum of all income transactions
+Total Income = Sum of all Income Transactions
 ```
 
-### Total Expenses
+### 💸 Total Expenses
 
 ```text
-Total Expenses = Sum of all expense transactions
+Total Expenses = Sum of all Expense Transactions
 ```
 
-### Current Balance
+### 💵 Available Balance
 
 ```text
-Balance = Total Income - Total Expenses
+Balance = Total Income − Total Expenses
 ```
 
-### Savings Rate
+### 📊 Budget Usage
 
 ```text
-Savings Rate = (Balance / Total Income) × 100
-```
-
-### Budget Utilization
-
-```text
-Budget Utilization =
+Budget Usage (%) =
 (Total Expenses / Monthly Budget) × 100
+```
+
+### 🎯 Savings
+
+```text
+Savings = Total Income − Total Expenses
+```
+
+### 🏆 Savings Progress
+
+```text
+Savings Progress (%) =
+(Savings / Savings Goal) × 100
 ```
 
 ---
 
-# 🧩 Main Modules
+# 💾 Data Storage
 
-## 1. Dashboard Module
+The application uses the browser's **LocalStorage API** for persistence.
 
-Displays the user's overall financial status.
+### Storage Key
 
-## 2. Transaction Management Module
+```text
+budgetPlanningApplication
+```
 
-Responsible for:
+### Example Data
 
-- Creating transactions
-- Updating transactions
-- Deleting transactions
-- Searching transactions
-- Filtering transactions
+```json
+{
+  "transactions": [
+    {
+      "id": 1,
+      "type": "expense",
+      "description": "Groceries",
+      "category": "Food",
+      "amount": 3500,
+      "date": "2026-10-01"
+    }
+  ],
+  "budget": 15000,
+  "savingsGoal": 10000
+}
+```
 
-## 3. Budget Management Module
-
-Responsible for setting and monitoring the monthly budget.
-
-## 4. Savings Goal Module
-
-Responsible for setting and tracking savings targets.
-
-## 5. Expense Analysis Module
-
-Provides category-wise expense analysis.
-
-## 6. Storage Module
-
-Stores application data using browser LocalStorage.
-
-## 7. Export Module
-
-Converts transaction data into CSV format.
+> 🔐 No external server or database is required in the current version.
 
 ---
 
 # 🧪 Testing
 
-The project includes a dedicated testing document containing test cases for:
+The project includes structured testing documentation covering:
 
-- Adding transactions
-- Editing transactions
-- Deleting transactions
-- Input validation
-- Budget calculation
-- Savings calculation
-- Search functionality
-- Filtering
-- LocalStorage persistence
-- CSV export
-- Responsive UI
+✅ Functional Testing  
+✅ CRUD Testing  
+✅ Input Validation  
+✅ Calculation Testing  
+✅ LocalStorage Testing  
+✅ Search & Filter Testing  
+✅ Budget Testing  
+✅ Savings Testing  
+✅ CSV Export Testing  
+✅ Reset Testing  
+✅ Responsive UI Testing  
+✅ Browser Compatibility Testing  
 
-Detailed test cases are available in:
+### 📋 Test Documentation
 
-```text
-tests/test-cases.md
-```
+👉 [View Test Plan](docs/07-Test-Plan.md)
+
+👉 [View Test Cases](tests/test-cases.md)
 
 ---
 
 # 📚 Software Engineering Documentation
 
-This project has been designed according to Software Engineering principles.
+This project includes complete Software Engineering documentation.
 
-The repository contains:
-
-| Document | Description |
+| 📄 Document | 🔗 Link |
 |---|---|
-| `SRS.md` | Software Requirements Specification |
-| `Software-Requirements.md` | Functional & Non-Functional Requirements |
-| `System-Design.md` | System Architecture & Module Design |
-| `Use-Case.md` | Use Cases and User Interactions |
-| `Test-Plan.md` | Testing Strategy |
-| `test-cases.md` | Detailed Test Cases |
-| `User-Manual.md` | Application Usage Guide |
+| 📋 Software Requirements Specification | [SRS](SRS.md) |
+| 🏗️ System Design | [System Design](docs/01-System-Design.md) |
+| 👤 Use Case Diagram | [Use Case Diagram](docs/02-Use-Case-Diagram.md) |
+| 🔄 Data Flow Diagram | [DFD](docs/03-DFD.md) |
+| 🗃️ ER Diagram | [ER Diagram](docs/04-ER-Diagram.md) |
+| 🔀 Flowchart | [Flowchart](docs/05-Flowchart.md) |
+| 💾 Database Design | [Database Design](docs/06-Database-Design.md) |
+| 🧪 Test Plan | [Test Plan](docs/07-Test-Plan.md) |
+| 📖 User Manual | [User Manual](docs/08-User-Manual.md) |
+| 🧪 Test Cases | [Test Cases](tests/test-cases.md) |
 
 ---
 
-# 🔐 Data & Privacy
+# 🎯 Project Objectives
 
-The current version uses browser **LocalStorage**.
+The project aims to:
 
-This means:
-
-- Data is stored locally on the user's device.
-- No financial data is sent to a server.
-- No banking credentials are collected.
-- Clearing browser site data may remove stored transactions.
-
-Users can use the **CSV Export** feature to maintain a backup.
+- 🧾 Simplify personal expense tracking
+- 💰 Manage income and expenses
+- 📊 Monitor monthly budgets
+- 🎯 Track savings goals
+- 📈 Understand spending patterns
+- 🔎 Find transactions quickly
+- 💾 Maintain persistent browser data
+- 📥 Provide downloadable financial records
+- 📱 Provide a responsive user experience
 
 ---
 
-# 🔮 Future Scope
+# 🔐 Privacy & Security
 
-The application can be extended with:
+The current version is a **client-side application**.
 
-- 🔐 User authentication
-- ☁️ Cloud database
-- 👥 Multiple user accounts
-- 🔄 Recurring transactions
-- 📅 Monthly/yearly financial reports
-- 📄 PDF report generation
-- 📊 Advanced charts and analytics
-- 🤖 AI-based spending recommendations
-- 🏦 Bank account integration
-- 📱 Android/iOS mobile application
-- 🔔 Budget and payment notifications
+Therefore:
+
+- 🔒 Data remains in the user's browser.
+- 🌐 No financial information is sent to a remote server.
+- 👤 No user account is required.
+- ☁️ No cloud synchronization is currently implemented.
+
+> ⚠️ This project is intended for educational and demonstration purposes. Users should avoid storing highly sensitive financial information in the application.
 
 ---
 
 # ⚠️ Current Limitations
 
-- Data is stored only in browser LocalStorage.
-- There is no user authentication.
-- Data is not synchronized across devices.
-- The application does not connect to real bank accounts.
-- Clearing browser storage can remove application data.
+The current version does not include:
+
+- ❌ User authentication
+- ❌ Backend API
+- ❌ Cloud database
+- ❌ Multi-user support
+- ❌ Cross-device synchronization
+- ❌ Bank account integration
+- ❌ Automated financial notifications
 
 ---
 
-# 👨‍💻 Software Engineering Concepts Used
+# 🚀 Future Scope
 
-This project demonstrates several Software Engineering concepts:
+The application can be extended into a full-stack financial management platform.
 
-- Requirement Engineering
-- Functional Requirements
-- Non-Functional Requirements
-- Software Architecture
-- Modular Design
-- User-Centered Design
-- Validation
-- Testing
-- Risk Analysis
-- Maintainability
-- Usability
-- Future Scalability
+### 🔮 Planned Improvements
+
+- 🔐 User authentication
+- ☁️ Cloud synchronization
+- 🗄️ MongoDB/PostgreSQL database
+- ⚙️ Node.js + Express backend
+- 📊 Advanced charts and analytics
+- 📄 PDF financial reports
+- 🔔 Budget alerts
+- 🔁 Recurring transactions
+- 📱 Dedicated mobile application
+- 🤖 AI-based spending recommendations
+- 🌍 Multi-currency support
+- 👥 Multi-user accounts
 
 ---
 
-# 📈 Project Workflow
+# 🧑‍💻 Software Engineering Concepts
+
+This project demonstrates:
 
 ```text
-Requirement Analysis
+📋 Requirement Engineering
         ↓
-System Design
+📄 SRS
         ↓
-UI Design
+🏗️ System Design
         ↓
-Implementation
+👤 Use Case Modelling
         ↓
-Testing
+🔄 DFD
         ↓
-Debugging
+🗃️ ER Modelling
         ↓
-Documentation
+🔀 Flowchart
         ↓
-Final Deployment
+💻 Implementation
+        ↓
+🧪 Testing
+        ↓
+📖 Documentation
+        ↓
+🚀 Deployment
 ```
 
 ---
 
-# 🤝 Contribution
+# 📈 Project Status
 
-Contributions are welcome.
-
-To contribute:
-
-```bash
-git fork
-git clone
-git checkout -b feature-name
-git commit -m "Add new feature"
-git push
+```text
+████████████████████████████████ 100%
 ```
 
-Then create a Pull Request.
+### ✅ Completed
+
+- [x] Requirements Analysis
+- [x] SRS
+- [x] System Design
+- [x] Use Case Diagram
+- [x] DFD
+- [x] ER Diagram
+- [x] Flowcharts
+- [x] Database Design
+- [x] Application Development
+- [x] Testing
+- [x] Test Cases
+- [x] User Manual
+- [x] GitHub Documentation
 
 ---
 
-# 📄 License
+# 👨‍💻 Author
 
-This project is licensed under the **MIT License**.
+## Ansh Pandey
 
----
+🎓 **B.Tech — Computer Science & Engineering**
 
-# 👨‍🎓 Author
+💻 **Software Engineering Project**
 
-**Abhishek Tiwari**
-
-**B.Tech Computer Science & Engineering**
+📅 **2026**
 
 ---
 
-## ⭐ Project Summary
+# ⭐ Support
 
-The **Budget Planning Application** provides a simple and effective solution for personal financial planning. It combines budget management, expense tracking, savings goals and financial analysis into a single responsive web application.
+If you find this project useful or interesting:
 
-The project also demonstrates the complete Software Engineering development process, from **requirements analysis and system design to implementation, testing and documentation**.
+⭐ **Star the repository**
 
-> **Plan your money. Track your spending. Achieve your goals. 💰**
+🍴 **Fork the repository**
+
+📢 **Share the project**
+
+---
+
+# 📜 License
+
+This project is developed for **academic and educational purposes**.
+
+See the [LICENSE](LICENSE) file for more information.
+
+---
+
+<div align="center">
+
+### 💰 Budget Planning Application
+
+**Plan Better • Spend Smarter • Save More 🚀**
+
+Made with ❤️ using **HTML, CSS & JavaScript**
+
+⭐ **If you like this project, don't forget to star the repository!** ⭐
+
+</div>
