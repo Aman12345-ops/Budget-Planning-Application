@@ -36,31 +36,6 @@ The project is developed as a **Software Engineering academic project** and demo
 | 📱 Responsive UI | Works across different screen sizes |
 
 ---
-
-# 🖥️ Application Preview
-
-### 📊 Dashboard
-
-> Add your screenshot here:
-
-```text
-screenshots/dashboard.png
-```
-
-![Dashboard](screenshots/dashboard.png)
-
-### 💳 Transaction Management
-
-![Transactions](screenshots/transactions.png)
-
-### 📱 Responsive Design
-
-![Mobile View](screenshots/mobile-view.png)
-
-> 💡 **Tip:** Put your actual screenshots inside the `screenshots/` folder using the filenames above.
-
----
-
 # 🛠️ Tech Stack
 
 ### 🎨 Frontend
@@ -465,17 +440,6 @@ If you find this project useful or interesting:
 📢 **Share the project**
 
 ---
-
-# 📜 License
-
-This project is developed for **academic and educational purposes**.
-
-See the [LICENSE](LICENSE) file for more information.
-
----
-
-<div align="center">
-
 ### 💰 Budget Planning Application
 
 **Plan Better • Spend Smarter • Save More 🚀**
